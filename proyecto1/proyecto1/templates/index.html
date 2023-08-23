@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h1>Hola {{nombre}}</h1>
+    <h2>fecha: {{fecha}}</h2>    
+    <h3>{{listica.2}}</h3>
+    <ul>
+    {% if listica %}
+        {% for x in listica %}
+
+        <li>{{x}}</li>
+        {% endfor %}
+ 
+        {% else %}
+
+        <h1>no hay nada</h1>
+
+    {% endif %}
+        </ul> 
+</body>
+</html>
